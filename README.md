@@ -4,6 +4,8 @@ Version 0.1.0 · Part of the Diatonic OS 10-day Meta Hackathon build exploration
 
 Diatonic OS is an original IT operations platform by Chromatix Studios. Founder attribution: Drew Fortini (@iamdrewfortini).
 
+Source mirrors: [Drew Fortini’s GitHub repository](https://github.com/iamdrewfortini/diatonic-rmm) · [Chromatix Studios GitLab namespace](https://git.chromatixstudios.com/chromatix-studios/diatonic-rmm).
+
 This public exploration demonstrates an authenticated observer API, bounded read only wall projections, and an edge watcher that keeps a last known good snapshot. It is an early prototype, not a complete RMM product or production deployment.
 
 The prototype displays synthetic topology and accepts bounded observations. It does not enroll a fleet, run remote commands, patch endpoints, control guests, or execute remediation. Technician and approver routes manage prototype records and proposed actions only; there is no execution endpoint.
