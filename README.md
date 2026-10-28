@@ -1,6 +1,6 @@
 # Diatonic RMM
 
-Part of the Diatonic OS 10-day Meta Hackathon build exploration.
+Version 0.1.0 · Part of the Diatonic OS 10-day Meta Hackathon build exploration.
 
 Diatonic OS is an original IT operations platform by Chromatix Studios. Founder attribution: Drew Fortini (@iamdrewfortini).
 
@@ -25,7 +25,7 @@ The edge watcher requires HTTPS, checks configured TCP services, polls the obser
 
 ## Tests and CI
 
-Run python3 -m unittest discover -s tests -v. GitHub Actions and GitLab CI use public hosted runners and Python 3.11; they install no dependencies and use no private registries.
+Run python3 -m unittest discover -s tests -v. The GitHub Actions and GitLab CI definitions target Python 3.11, install no project dependencies, and require no private registry. Runner provisioning is separate from these repository definitions. Both pipelines package the approved tracked source as diatonic-rmm-0.1.0.tar.gz.
 
 ## Attribution and license
 

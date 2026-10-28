@@ -1,8 +1,26 @@
 image: python:3.11-slim
-stages: [test]
+stages: [test, package]
+
 unittest:
   stage: test
   tags: [k8s]
   script:
     - python --version
     - python -m unittest discover -s tests -v
+
+source-archive:
+  stage: package
+  tags: [k8s]
+  script:
+    - mkdir -p staging/diatonic-rmm-0.1.0
+    - cp VERSION README.md RELEASE_NOTES.md SHOWCASE.md BRAND_CONTRACT.md LICENSE.md SECURITY.md .gitignore .gitlab-ci.yml staging/diatonic-rmm-0.1.0/
+    - cp -R api edge ops showcase tests .github staging/diatonic-rmm-0.1.0/
+    - find staging/diatonic-rmm-0.1.0 -type d -name __pycache__ -prune -exec rm -rf {} +
+    - find staging/diatonic-rmm-0.1.0 -type f -name '*.py[co]' -delete
+    - tar -czf diatonic-rmm-0.1.0.tar.gz -C staging diatonic-rmm-0.1.0
+    - tar -tzf diatonic-rmm-0.1.0.tar.gz
+  artifacts:
+    name: diatonic-rmm-0.1.0.tar.gz
+    paths:
+      - diatonic-rmm-0.1.0.tar.gz
+    expire_in: 30 days
