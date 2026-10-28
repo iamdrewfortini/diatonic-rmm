@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+<title id="title">Diatonic OS observer API flow</title>
+<desc id="desc">Synthetic snapshot and edge checks pass through a bounded allowlist to a read only tenant wall projection.</desc>
+<rect width="1200" height="360" rx="24" fill="#080B16"/>
+<text x="56" y="64" fill="#4DE5D6" font-family="sans-serif" font-size="18" letter-spacing="3">CHROMATIX STUDIOS · DIATONIC OS</text>
+<text x="56" y="112" fill="#F3F5FF" font-family="sans-serif" font-size="34" font-weight="700">Authenticated observer path</text>
+<g font-family="sans-serif">
+<rect x="56" y="170" width="250" height="112" rx="14" fill="#11182B" stroke="#273353" stroke-width="2"/>
+<text x="82" y="212" fill="#F3F5FF" font-size="20" font-weight="700">Synthetic snapshot</text>
+<text x="82" y="247" fill="#A5AFCB" font-size="16">Generated fixture data</text>
+<rect x="370" y="170" width="250" height="112" rx="14" fill="#11182B" stroke="#956CFF" stroke-width="2"/>
+<text x="396" y="212" fill="#F3F5FF" font-size="20" font-weight="700">Bounded projection</text>
+<text x="396" y="247" fill="#A5AFCB" font-size="16">Allowlist · freshness · size</text>
+<rect x="684" y="170" width="220" height="112" rx="14" fill="#11182B" stroke="#273353" stroke-width="2"/>
+<text x="710" y="212" fill="#F3F5FF" font-size="20" font-weight="700">Tenant wall</text>
+<text x="710" y="247" fill="#A5AFCB" font-size="16">Read only snapshot + ETag</text>
+<rect x="968" y="170" width="176" height="112" rx="14" fill="#11182B" stroke="#273353" stroke-width="2"/>
+<text x="990" y="212" fill="#F3F5FF" font-size="20" font-weight="700">Edge checks</text>
+<text x="990" y="247" fill="#A5AFCB" font-size="16">Timed TCP + cache</text>
+</g>
+<g fill="none" stroke="#4DE5D6" stroke-width="3">
+<path d="M306 226h54"/><path d="M620 226h54"/><path d="M904 226h50"/>
+</g>
+<g fill="#4DE5D6"><path d="m360 219 12 7-12 7z"/><path d="m674 219 12 7-12 7z"/><path d="m954 219 12 7-12 7z"/></g>
+<text x="56" y="326" fill="#A5AFCB" font-family="sans-serif" font-size="15">Synthetic showcase · No endpoint execution · No production connections</text>
+</svg>

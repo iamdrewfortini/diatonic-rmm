@@ -1,0 +1,8 @@
+image: python:3.11-slim
+stages: [test]
+unittest:
+  stage: test
+  tags: [k8s]
+  script:
+    - python --version
+    - python -m unittest discover -s tests -v
