@@ -3,14 +3,14 @@ stages: [test, package]
 
 unittest:
   stage: test
-  tags: [k8s]
+  tags: [diatonic-public]
   script:
     - python --version
     - python -m unittest discover -s tests -v
 
 source-archive:
   stage: package
-  tags: [k8s]
+  tags: [diatonic-public]
   script:
     - mkdir -p staging/diatonic-rmm-0.1.0
     - cp VERSION README.md RELEASE_NOTES.md SHOWCASE.md BRAND_CONTRACT.md LICENSE.md SECURITY.md .gitignore .gitlab-ci.yml staging/diatonic-rmm-0.1.0/
